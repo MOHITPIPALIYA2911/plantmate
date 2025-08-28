@@ -1,4 +1,10 @@
 # Getting Started with Create React App
+UML Class Diagram
+![PlantMate Class Diagram](assets/plantuml.png)
+npm
+
+
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
