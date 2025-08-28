@@ -1,7 +1,6 @@
 # Getting Started with Create React App
 UML Class Diagram
 ![PlantMate Class Diagram](assets/plantuml.png)
-npm
 
 
 # Getting Started with Create React App
