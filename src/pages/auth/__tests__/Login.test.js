@@ -37,3 +37,23 @@ test("submitting empty form shows validation error", () => {
     "Please enter both email and password."
   );
 });
+
+test("toggles password visibility", () => {
+  render(
+    <BrowserRouter>
+      <Login />
+    </BrowserRouter>
+  );
+
+  const pwdInput = screen.getByPlaceholderText(/Enter your password/i);
+  expect(pwdInput).toHaveAttribute("type", "password");
+
+  const toggleBtn = screen.getByRole("button", { name: /show password/i });
+  fireEvent.click(toggleBtn);
+  expect(pwdInput).toHaveAttribute("type", "text");
+
+  // now it should read "Hide password"
+  const hideBtn = screen.getByRole("button", { name: /hide password/i });
+  fireEvent.click(hideBtn);
+  expect(pwdInput).toHaveAttribute("type", "password");
+});
